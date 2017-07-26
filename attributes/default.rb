@@ -1,0 +1,9 @@
+node.default['papertrail']['files'] = []
+node.default['papertrail']['exclude_files'] = []
+node.default['papertrail']['hostname'] = nil
+node.default['papertrail']['exclude_patterns'] = []
+node.default['papertrail']['destination_host'] = ''
+node.default['papertrail']['destination_port'] = ''
+node.default['papertrail']['destination_protocol'] = 'tls'
+node.default['papertrail']['new_file_check_interval'] = nil
+node.default['papertrail']['version'] = '0.19'

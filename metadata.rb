@@ -1,0 +1,12 @@
+name             'papertrail'
+maintainer       'Papertrail'
+maintainer_email 'support@papertrailapp.com'
+license          'MIT'
+description      'Installs/Configures Papertrail\'s remote_syslog2'
+long_description 'Installs/Configures Papertrail\'s remote_syslog2'
+source_url       'https://github.com/papertrail/chef-papertrail'
+version          '1.0.0'
+
+depends 'yum'
+depends 'yum-epel'
+depends 'apt'
