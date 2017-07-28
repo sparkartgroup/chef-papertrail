@@ -15,7 +15,7 @@ This cookbook configures the Papertrail [remote_syslog2](https://github.com/pape
 
 ### Quickstart
 
-1. Set the attributes `node['papertrail']['destination_host']`, `node['papertrail']['destination_port']`, nd at least one file/directory in `node['papertrail']['files']`.
+1. Set the attributes `node['papertrail']['destination_host']`, `node['papertrail']['destination_port']`, and at least one file/directory in `node['papertrail']['files']`.
 2. Include `papertrail` in your node's `run_list`:
 
 ```json
