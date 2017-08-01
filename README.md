@@ -1,6 +1,6 @@
 # Papertrail Cookbook
 
-This cookbook configures the Papertrail [remote_syslog2](https://github.com/papertrail/remote_syslog2) agent. If you want to configure `rsyslog` for use with Papertrail, check out the [documentation on the Papertrail website](http://help.papertrailapp.com/kb/configuration/configuring-remote-syslog-from-unixlinux-and-bsdos-x/).
+This cookbook configures the Papertrail [remote_syslog2](https://github.com/papertrail/remote_syslog2) agent. To configure `rsyslog` for use with Papertrail, check out the [Papertrail documentation](http://help.papertrailapp.com/kb/configuration/configuring-remote-syslog-from-unixlinux-and-bsdos-x/).
 
 ## Supported Platforms
 
@@ -26,7 +26,7 @@ This cookbook configures the Papertrail [remote_syslog2](https://github.com/pape
 }
 ```
 
-This will install `remote_syslog2` with the configured settings you set in the Chef node attributes.
+This will install `remote_syslog2` with the configured settings from the Chef node attributes.
 
 
 ## Recipes & their attributes
@@ -48,7 +48,7 @@ This cookbook only has one recipe, which does all setup and configuration. There
     ]
   ```
 
-  If you want to tag a file/path, the structure is slightly different:
+  To tag a file/path, the structure is slightly different:
   ```ruby
     node['papertrail']['files'] = [
       '/tmp/test.log',
@@ -95,14 +95,15 @@ This cookbook only has one recipe, which does all setup and configuration. There
 
 - `node['papertrail']['destination_host']`, `node['papertrail']['destination_port']`, & `node['papertrail']['destination_protocol']`
 
-  **Type:** String
+  **Type:** String (`destination_host` & `destination_protocol`)
+  **Type:** Integer (`destination_port`)
 
-  The Papertrail host, port, and protocol for sending your logs to. These are required. Destination and port default to empty, while Protocol defaults to `tls`.
+  The Papertrail host and port to send logs to, and the protocol to use. These are required. Destination and port default to empty, while Protocol defaults to `tls`.
 
   Example:
   ```ruby
-    node['papertrail']['destination_host'] = 'YOUR-HOST-HERE'
-    node['papertrail']['destination_port'] = 'YOUR-PORT-HERE'
+    node['papertrail']['destination_host'] = 'logsN.papertrailapp.com'
+    node['papertrail']['destination_port'] = XXXXX
     node['papertrail']['destination_protocol'] = 'tls'
   ```
 
