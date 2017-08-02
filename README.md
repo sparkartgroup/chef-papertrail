@@ -11,6 +11,8 @@ This cookbook configures the Papertrail [remote_syslog2](https://github.com/pape
 * Ubuntu 16.04
 * Debian 9
 
+This cookbook has been tested on Chef 13.x and 12.21.x.
+
 ## Usage
 
 ### Quickstart
@@ -116,6 +118,24 @@ This cookbook only has one recipe, which does all setup and configuration. There
   Example:
   ```ruby
     node['papertrail']['new_file_check_interval'] = 30
+  ```
+
+- `node['papertrail']['severity']`
+
+  Overrides the default `remote_syslog2` severity level.
+
+  Example:
+  ```ruby
+    node['papertrail']['severity'] = 'warn'
+  ```
+
+- `node['papertrail']['facility']`
+
+  Overrides the default `remote_syslog2` facility.
+
+  Example:
+  ```ruby
+    node['papertrail']['facility'] = 'local7'
   ```
 
 - `node['papertrail']['version']`

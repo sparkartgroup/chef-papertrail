@@ -6,4 +6,6 @@ node.default['papertrail']['destination_host'] = ''
 node.default['papertrail']['destination_port'] = nil
 node.default['papertrail']['destination_protocol'] = 'tls'
 node.default['papertrail']['new_file_check_interval'] = nil
+node.default['papertrail']['facility'] = nil
+node.default['papertrail']['severity'] = nil
 node.default['papertrail']['version'] = '0.19'

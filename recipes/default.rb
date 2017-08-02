@@ -44,7 +44,9 @@ template '/etc/log_files.yml' do
     exclude_files: node['papertrail']['exclude_files'],
     hostname: node['papertrail']['hostname'],
     exclude_patterns: node['papertrail']['exclude_patterns'],
-    new_file_check_interval: node['papertrail']['new_file_check_interval']
+    new_file_check_interval: node['papertrail']['new_file_check_interval'],
+    facility: node['papertrail']['facility'],
+    severity: node['papertrail']['severity']
   )
   notifies :restart, 'service[remote_syslog]', :delayed
 end
