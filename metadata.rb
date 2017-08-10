@@ -5,7 +5,7 @@ license          'MIT'
 description      'Installs/Configures Papertrail\'s remote_syslog2'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 source_url       'https://github.com/papertrail/chef-papertrail'
-version          '1.1.0'
+version          '1.1.1'
 issues_url       'https://github.com/papertrail/chef-papertrail/issues'
 chef_version     '>= 12.21'
 supports 'ubuntu', '>= 14.04'
