@@ -142,7 +142,7 @@ This cookbook only has one recipe, which does all setup and configuration. There
 
   **Type:** String
 
-  Use a different version of `remote_syslog` than the default. The default is specified in `map.jinja`.
+  Use a different version of `remote_syslog` than the default.
 
   Example:
   ```ruby
