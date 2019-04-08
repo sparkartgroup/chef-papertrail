@@ -7,7 +7,7 @@ long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 source_url       'https://github.com/papertrail/chef-papertrail'
 version          '1.1.1'
 issues_url       'https://github.com/papertrail/chef-papertrail/issues'
-chef_version     '>= 12.21'
+chef_version     '>= 12.18'
 supports 'ubuntu', '>= 14.04'
 supports 'debian', '>= 9.0'
 supports 'centos', '>= 6.0'
